@@ -245,7 +245,7 @@
 }
 
 /* Section Headings */
-#services h2, #features h2, #offer h2, .testimonial-h5 {
+#services h2, #features h2, #offer h2, .testimonial-h5, .faq-header h3 {
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     font-weight: 700;
@@ -266,7 +266,7 @@
 }
 
 /* Link/Button Hover Effects */
-#services a, #features a, #offer a {
+#services a, #features a, #offer a, .faq-header h3 {
     color: #1B5E20; /* Matches text color */
     text-decoration: none;
     font-weight: 600;
@@ -339,6 +339,53 @@ footer {
       background-color: #6c63ff;
     }
 
+    /** FAQ Section **/
+    .faq-section {
+      padding: 0rem 1rem;
+    }
+    .faq-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .faq-button {
+      text-align: left;
+      font-size: 1.1rem;
+      padding: 1rem;
+      background-color: #1B5E20;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-button:hover {
+      background-color: #1B5E20;
+      transform: translateY(-3px);
+    }
+    .faq-button:focus {
+      box-shadow: 0 0 0 0.25rem #FF6801;
+    }
+    .faq-answer {
+      padding: 1rem;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      margin-top: 0.5rem;
+    }
+    .icon {
+      transition: transform 0.3s ease;
+    }
+    .icon.collapsed {
+      transform: rotate(0deg);
+    }
+    .icon:not(.collapsed) {
+      transform: rotate(180deg);
+    }
+
         /* Animations */
         @keyframes fadeInDown {
             from {
@@ -365,6 +412,7 @@ footer {
                     <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/faqs">FAQS</a></li>
                 </ul>
             </div>
         </div>
@@ -384,7 +432,7 @@ footer {
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="https://source.unsplash.com/500x500/?help,children" class="img-fluid about-img" alt="About Us">
+                    <img src="../teamwork.jpg" class="img-fluid about-img" alt="About Us">
                 </div>
                 <div class="col-md-6 d-flex flex-column justify-content-center border p-3 mt-0 rounded shadow-lg ">
                     <h2 class="text-center">About Us</h2>
@@ -561,6 +609,70 @@ footer {
     </div>
   </div>
     </section>
+
+
+    <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-header">
+        <h3>Frequently Asked Questions</h3>
+      </div>
+      
+      <div class="accordion" id="faqAccordion">
+        <!-- FAQ Item 1 -->
+        <div class="mb-3">
+          <button class="faq-button w-100" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+            <span>What services do you offer?</span>
+            <span class="icon collapsed" aria-hidden="true">&#9660;</span>
+          </button>
+          <div id="faq1" class="collapse" data-bs-parent="#faqAccordion">
+            <div class="faq-answer">
+              We provide a range of services including web development, data analytics, and consulting to help businesses achieve their goals efficiently.
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 2 -->
+        <div class="mb-3">
+          <button class="faq-button w-100" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+            <span>How can I contact your support team?</span>
+            <span class="icon collapsed" aria-hidden="true">&#9660;</span>
+          </button>
+          <div id="faq2" class="collapse" data-bs-parent="#faqAccordion">
+            <div class="faq-answer">
+              You can reach our support team through the contact form on our website, via email at support@example.com, or by calling our hotline at (123) 456-7890.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="mb-3">
+          <button class="faq-button w-100" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+            <span>Do you offer custom solutions?</span>
+            <span class="icon collapsed" aria-hidden="true">&#9660;</span>
+          </button>
+          <div id="faq3" class="collapse" data-bs-parent="#faqAccordion">
+            <div class="faq-answer">
+              Yes, we specialize in creating tailored solutions to meet the specific needs of our clients. Contact us to discuss your requirements.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="mb-3">
+          <button class="faq-button w-100" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+            <span>What are your working hours?</span>
+            <span class="icon collapsed" aria-hidden="true">&#9660;</span>
+          </button>
+          <div id="faq4" class="collapse" data-bs-parent="#faqAccordion">
+            <div class="faq-answer">
+              Our regular working hours are Monday to Friday, 9:00 AM to 6:00 PM. However, our support team is available 24/7 for urgent matters.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <!-- Footer -->
   <footer class="bg-dark text-white py-5">
