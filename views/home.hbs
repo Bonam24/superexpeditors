@@ -245,7 +245,7 @@
 }
 
 /* Section Headings */
-#services h2, #features h2, #offer h2 {
+#services h2, #features h2, #offer h2, .testimonial-h5 {
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     font-weight: 700;
@@ -272,7 +272,7 @@
     font-weight: 600;
     transition: color 0.3s ease-in-out;
 }
-#offer h5{
+#offer h5, .testimonial-h5{
     color: #1B5E20;
 }
 
@@ -318,6 +318,25 @@ footer {
 
     footer .small {
         font-size: 0.9rem;
+    }
+
+    /* Testimonial Carousel */
+    .testimonial-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    .testimonial-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .carousel-indicators [data-bs-target] {
+      background-color: #6c63ff;
     }
 
         /* Animations */
@@ -470,6 +489,77 @@ footer {
                 </div>
             </div>
         </div>
+    </section>
+    
+<!-- Testimonial Carousel -->
+    <section>
+        <h5 class="testimonial-h5">Testimonials</h5>
+        <div class="container">
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+      </div>
+      
+      <!-- Carousel Items -->
+      <div class="carousel-inner">
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="card testimonial-card p-4 border-0 shadow-sm text-center">
+                <img src="https://via.placeholder.com/80" alt="Client" class="testimonial-avatar mx-auto">
+                <h5>Alade Hikmah</h5>
+                <p class="text-muted">Graduate Student</p>
+                <p class="fst-italic">"The visualization was really eye opening and it makes we want to achieve my goals. Thanks
+                    to Super Expeditors"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="card testimonial-card p-4 border-0 shadow-sm text-center">
+                <img src="https://via.placeholder.com/80" alt="Client" class="testimonial-avatar mx-auto">
+                <h5>Abubakar Yakub</h5>
+                <p class="text-muted">Graduate student</p>
+                <p class="fst-italic">"Your lessons and orientation on accountability imbibed in me 
+                    kept on exemplifying in all my activities. Thank you DMO and your team"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="card testimonial-card p-4 border-0 shadow-sm text-center">
+                <img src="https://via.placeholder.com/80" alt="Client" class="testimonial-avatar mx-auto">
+                <h5>Damilola Ajiboye</h5>
+                <p class="text-muted">Accountant</p>
+                <p class="fst-italic">"
+                    I have experienced a major positive change in the way I handle my daily tasks. Thanks to the Super Expeditors"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
     </section>
 
     <!-- Footer -->
