@@ -113,36 +113,101 @@
         }
 
         /* Services Section */
-        .service-card {
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            transition: all 0.4s ease-in-out;
-            padding: 20px;
-        }
-        .service-card h5{
-            font-weight: bold;
-        }
-        .service-card p{
-            text-align: justify;
-        }
+        #services {
+      position: relative;
+      padding: 3rem 0;
+      background: linear-gradient(135deg, #ff6f00, #0f9d58);
+    }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            background-color: #FF6801;
-            color: #fff;
-        }
+    #services h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 4rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
 
-        .service-card i {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #045B2E;
-            transition: color 0.4s ease-in-out;
-        }
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-        .service-card:hover i {
-            color: #fff;
-        }
+    .service-card {
+      position: relative;
+      background: #fff;
+      color: #333;
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      width: 27em;
+      height: fit-content;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      transform: translateY(20px) scale(0.95);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .service-card:hover {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .service-card:nth-child(2) {
+      margin-top: -40px;
+    }
+
+    .service-card:nth-child(3) {
+      margin-top: -80px;
+    }
+
+    .service-card i {
+      font-size: 3rem;
+      color: #0f9d58;
+      margin-bottom: 20px;
+      transition: color 0.3s;
+    }
+
+    .service-card:hover i {
+      color: #ff6f00;
+    }
+
+    .service-card h5 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      font-size: 1.5rem;
+      color: #555;
+    }
+
+    /* Decorative Background Patterns */
+    .background-pattern {
+      position: absolute;
+      z-index: -1;
+    }
+
+    .background-pattern.circle-1 {
+      width: 200px;
+      height: 200px;
+      background: #ff6f00;
+      border-radius: 50%;
+      top: -50px;
+      left: -50px;
+      opacity: 0.5;
+    }
+
+    .background-pattern.circle-2 {
+      width: 150px;
+      height: 150px;
+      background: #0f9d58;
+      border-radius: 50%;
+      bottom: -50px;
+      right: -30px;
+      opacity: 0.5;
+    }
 
         /* Key Features Section */
         .key-feature-card {
@@ -221,28 +286,92 @@
             background-color: #f8f9fa;
             padding: 60px 0;
         }/* Services Section Background */
-#services {
-    background: #F8F9FA; /* Light gray */
-    color: #1B5E20; /* Dark green for text */
-    padding: 60px 0;
-    border: 1px solid #E0E0E0; /* Subtle gray border */
-}
 
 /* Key Features Section Background */
 #features {
     background: #F5F5F5; /* Slightly darker gray */
     color: #2E7D32; /* Medium green for text */
-    padding: 60px 0;
     border: 1px solid #D6D6D6; /* Subtle gray border */
 }
 
 /* What We Offer Section Background */
-#offer {
-    background: #ECECEC; /* Muted light gray */
-    color: #388E3C; /* Deep green for text */
-    padding: 60px 0;
-    border: 1px solid #CCCCCC; /* Subtle gray border */
-}
+ #offer {
+      position: relative;
+       background: linear-gradient(135deg, #0f9d58, #ff6f00);
+    }
+
+    .offer-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .offer-card {
+      background: linear-gradient(145deg, #ffffff, #f7f7f7);
+      border-radius: 20px;
+      padding: 40px 20px;
+      text-align: center;
+      width: 25em;
+      height: fit-content;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .offer-card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    }
+
+    .offer-icon {
+      font-size: 4rem;
+      color: #0f9d58;
+      margin-bottom: 20px;
+      transition: color 0.3s;
+    }
+
+    .offer-card:hover .offer-icon {
+      color: #ff6f00;
+    }
+
+    .offer-title {
+      font-size: 1.75rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    #offer p {
+      font-size: 1.4rem;
+      color: #666;
+    }
+
+    /* Decorative Circles */
+    .circle-green {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: #0f9d58;
+      border-radius: 50%;
+      top: -50px;
+      left: -50px;
+      z-index: -1;
+      opacity: 0.6;
+    }
+
+    .circle-orange {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: #ff6f00;
+      border-radius: 50%;
+      bottom: -30px;
+      right: -30px;
+      z-index: -1;
+      opacity: 0.6;
+    }
 
 /* Section Headings */
 #services h2, #features h2, #offer h2, .testimonial-h5, .faq-header h3 {
@@ -255,7 +384,7 @@
 }
 
 /* Paragraph Styling */
-#services p, #features p, #offer p {
+ #features p {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
@@ -412,7 +541,7 @@ footer {
                     <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/faqs">FAQS</a></li>
+                    
                 </ul>
             </div>
         </div>
@@ -450,37 +579,37 @@ footer {
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-5 mt-0">
-        <div class="container text-center">
-            <h2 class="mb-4">Our Services</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-book"></i>
-                        <h5>Crystal-Clear Goal Setting</h5>
-                        <p class="fs-5 fs-md-4">We turn your dreams into detailed, actionable plans that propel your business and life forward.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-heart-pulse"></i>
-                        <h5>Laser-Focused Progress Tracking</h5>
-                        <p class="fs-5 fs-md-4">We make sure you stay ahead of the game with our state-of-the-art tracking tools that provide instant clarity on your journey.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-person-check"></i>
-                        <h5>One-on-One Accountability</h5>
-                        <p class="fs-5 fs-md-4">Our expert coaches will help you stay on track, always ensuring you’re pushing toward your goals with maximum efficiency.</p>
-                    </div>
-                </div>
-            </div>
+    <section id="services">
+    <div class="container text-center">
+      <h2 class="mb-5">Our Services</h2>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="service-card mb-4">
+          <i class="bi bi-book"></i>
+          <h5>Crystal-Clear Goal Setting</h5>
+          <p>We turn your dreams into detailed, actionable plans that propel your business and life forward.</p>
         </div>
-    </section>
+        <!-- Card 2 -->
+        <div class="service-card mb-5">
+          <i class="bi bi-heart-pulse"></i>
+          <h5>Laser-Focused Progress Tracking</h5>
+          <p>We make sure you stay ahead of the game with our state-of-the-art tracking tools that provide instant clarity on your journey.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="service-card mb-3">
+          <i class="bi bi-person-check"></i>
+          <h5>One-on-One Accountability</h5>
+          <p>Our expert coaches will help you stay on track, always ensuring you’re pushing toward your goals with maximum efficiency.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Background Decorations -->
+    <div class="background-pattern circle-1"></div>
+    <div class="background-pattern circle-2"></div>
+  </section>
 
     <!-- Key Features Section -->
-    <section class="py-5" id="features">
+    <section class="py-3" id="features">
         <div class="container text-center">
             <h2 class="mb-4">Key Features</h2>
             <div class="row g-4">
@@ -510,34 +639,34 @@ footer {
     </section>
 
     <!-- Offer Section -->
-    <section class="py-5" id="offer">
-        <div class="container text-center">
-            <h2 class="mb-4">What We Offer</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="offer-card">
-                        <i class="offer-icon bi bi-person-lines-fill"></i>
-                        <h5>Personalized Coaching</h5>
-                        <p class="fs-5 fs-md-4">Tailored coaching sessions designed for YOUR specific goals.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="offer-card">
-                        <i class="offer-icon bi bi-chat-square-text-fill"></i>
-                        <h5>Unlimited Support</h5>
-                        <p class="fs-5 fs-md-4">Get ongoing support to ensure consistent progress and motivation.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="offer-card">
-                        <i class="offer-icon bi bi-clock"></i>
-                        <h5>Flexible Scheduling</h5>
-                        <p class="fs-5 fs-md-4">Schedule coaching sessions at your convenience, ensuring you're always making time for progress.</p>
-                    </div>
-                </div>
-            </div>
+    <section class="py-4" id="offer">
+    <div class="container text-center">
+      <h2 class="mb-5">What We Offer</h2>
+      <div class="offer-row">
+        <!-- Card 1 -->
+        <div class="offer-card">
+          <div class="circle-green"></div>
+          <i class="offer-icon bi bi-person-lines-fill"></i>
+          <h5 class="offer-title">Personalized Coaching</h5>
+          <p class="offer-text">Tailored coaching sessions designed for YOUR specific goals.</p>
         </div>
-    </section>
+        <!-- Card 2 -->
+        <div class="offer-card">
+          <div class="circle-orange"></div>
+          <i class="offer-icon bi bi-chat-square-text-fill"></i>
+          <h5 class="offer-title">Unlimited Support</h5>
+          <p class="offer-text">Get ongoing support to ensure consistent progress and motivation.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="offer-card">
+          <div class="circle-green"></div>
+          <i class="offer-icon bi bi-clock"></i>
+          <h5 class="offer-title">Flexible Scheduling</h5>
+          <p class="offer-text">Schedule coaching sessions at your convenience, ensuring you're always making time for progress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
     
 <!-- Testimonial Carousel -->
     <section>
