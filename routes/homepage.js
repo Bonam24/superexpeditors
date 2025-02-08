@@ -10,6 +10,9 @@ router.get('/contact', (req, res) => {
 router.get('/courses', (req, res) => {
   res.render('courses');
 });
+router.get('/ramadan', (req, res) => {
+  res.render('ramadan');
+});
 
 
 module.exports = router;
